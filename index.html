@@ -10,19 +10,23 @@ body {
 
 .first-card {
   background-color: transparent;
-  width: 270px;
+  width: 222px;
   height: 400px;
   perspective: 1000px;
   float:left;
+  transition: transform 2s;
+
 }
 
 .flip-card {
   background-color: transparent;
-  width: 270px;
+  width: 222px;
   height: 400px;
   perspective: 1000px;
   float: left;
   margin: 0 1.5%;
+  transition: transform 2s;
+
 }
 
 .flip-card-inner {
@@ -30,13 +34,13 @@ body {
   width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.6s;
+  transition: transform 2s;
   transform-style: preserve-3d;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 }
 
 .flip-card:hover .flip-card-inner, .flip-card:active .flip-card-inner  {
   transform: rotateY(180deg);
+    transition: transform 0.6s;
 }
 
 .flip-card-front, .flip-card-back {
@@ -68,6 +72,7 @@ body {
 .hide {
   clear: both;
   opacity:0%;
+  transition: opacity 100s; 
 
 
 }
@@ -77,8 +82,7 @@ body {
 .flip-card:hover + .hide,  .flip-card:active + .hide{
   opacity:100%;
   color: black;
-  transition: opacity 2s;
-  
+  transition: opacity 2s; 
 }
 
 
@@ -92,7 +96,7 @@ body {
 
 <div class="first-card">
 		<div class="first-card-front">
-			<img src="January.png" alt="BackSide" style="width:270px;height:400px;">
+			<img src="January.png" alt="BackSide" style="width:222px;height:400px;">
 		</div>
 	</div>
 
@@ -101,11 +105,11 @@ body {
 
   <div class="flip-card-inner">
     <div class="flip-card-front">
-      <img src="Back.png" alt="BackSide" style="width:270px;height:400px;">
+      <img src="Back.png" alt="BackSide" style="width:222px;height:400px;">
 
     </div>
     <div class="flip-card-back">
-		<img src="February.png" alt="FrontSide" style="width:270px;height:400px;">
+		<img src="February.png" alt="FrontSide" style="width:222px;height:400px;">
     </div>
   </div>
 </div>
